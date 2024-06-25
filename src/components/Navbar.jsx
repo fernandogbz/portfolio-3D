@@ -22,6 +22,9 @@ const Navbar = () => {
           }}
         >
           <img src={fjlogo} alt="logo" className="w-9 h-9 object-contain" />
+          <p className="text-white text-[18px] font-bold cursor pointer flex gap-1">
+            Fernando <span className="sm:block hidden">Jiménez</span>
+          </p>
         </Link>
       </div>
     </nav>
