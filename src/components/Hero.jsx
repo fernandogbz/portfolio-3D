@@ -1,9 +1,7 @@
-import React from 'react'
+import motion from "framer-motion";
 
 const Hero = () => {
-  return (
-    <div>Hero</div>
-  )
-}
+  return <div>Hero</div>;
+};
 
-export default Hero
+export default Hero;
