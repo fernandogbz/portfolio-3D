@@ -5,7 +5,11 @@ import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
-  return <div>Hero</div>;
+  return (
+    <>
+      <section className="relative w-full h-screen mx-auto">Hero</section>
+    </>
+  );
 };
 
 export default Hero;
