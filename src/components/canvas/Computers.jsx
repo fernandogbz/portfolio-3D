@@ -38,6 +38,22 @@ const Computers = () => {
 // sets up a camera position, enables shadows, and includes an `OrbitControls` component for user
 // interaction. */
 const ComputersCanvas = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Checking if it's a mobile device
+    const mediaQuery = window.matchMedia("(max-width: 500)");
+
+    setIsMobile(mediaQuery.matches);
+
+    const handleMediaQueryChange = (e) => setIsMobile(e.matches);
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    return () =>
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+  }, []);
+
   return (
     <Canvas
       frameloop="demand"
