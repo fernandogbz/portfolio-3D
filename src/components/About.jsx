@@ -14,7 +14,10 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Sobre mí</h2>
       </motion.div>
 
-      <motion.p>
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+      >
         Soy un desarrollador web con más de 2 años de experiencia en JavaScript
         y Java, utilizando frameworks como React y Three.js para el desarrollo
         de aplicaciones web. Me encanta aprender nuevas tecnologías y trabajar
