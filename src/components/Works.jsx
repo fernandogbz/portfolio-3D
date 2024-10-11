@@ -8,7 +8,14 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const Works = () => {
-  return <div>Works</div>;
+  return (
+    <>
+      <motion.div variants={textVariant()}>
+        <p className={styles.sectionSubText}>Mi trabajo</p>
+        <h2 className={styles.sectionHeadText}>Proyectos</h2>
+      </motion.div>
+    </>
+  );
 };
 
-export default Works;
+export default SectionWrapper(Works, "");
