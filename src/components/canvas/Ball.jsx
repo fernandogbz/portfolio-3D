@@ -18,8 +18,15 @@ const Ball = (props) => {
 
 const BallCanvas = ({ icon }) => {
   return (
-    
+    <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
+      <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls enableZoom={false} />
+        <Ball imgUrl={icon} />
+      </Suspense>
+
+      <Preload all />
+    </Canvas>
   );
 };
 
-export default Ball;
+export default BallCanvas;
