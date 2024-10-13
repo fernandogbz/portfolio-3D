@@ -27,6 +27,11 @@ const Works = () => {
           con diferentes tecnologías y gestionar proyectos de manera eficaz.
         </motion.p>
       </div>
+      <div className="mt-20 flex flex-wrap gap-7">
+        {projects.map((project, index) => (
+          <ProjectCard key={`project-${index}`} index={index} {...project} />
+        ))}
+      </div>
     </>
   );
 };
