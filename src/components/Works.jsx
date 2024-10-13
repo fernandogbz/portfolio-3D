@@ -7,6 +7,18 @@ import { projects } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
+// Add the tech, github link and demo link to the project object
+const ProjectCard = ({
+  index,
+  name,
+  description,
+  tags,
+  image,
+  source_code_link,
+}) => {
+  return <motion.div>test</motion.div>;
+};
+
 const Works = () => {
   return (
     <>
