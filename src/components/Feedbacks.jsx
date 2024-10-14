@@ -42,7 +42,7 @@ const FeedbackCard = ({
 
 const Feedbacks = () => {
   return (
-    <div className="mt-12 bg-black-100 rounded[20px]">
+    <div className="mt-12 bg-black-100 rounded-2xl">
       <div
         className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px]`}
       >
@@ -51,7 +51,9 @@ const Feedbacks = () => {
           <h2 className={styles.sectionHeadText}>Testimonios</h2>
         </motion.div>
       </div>
-      <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7`}>
+      <div
+        className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7 justify-center`}
+      >
         {testimonials.map((testimonial, index) => (
           <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
         ))}
@@ -60,4 +62,4 @@ const Feedbacks = () => {
   );
 };
 
-export default Feedbacks;
+export default SectionWrapper(Feedbacks, "");
