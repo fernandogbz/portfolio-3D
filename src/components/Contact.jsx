@@ -7,10 +7,6 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
-// luj2Edu7SQign2uYw
-// template_g4c0d1s
-// service_gjcnadk
-
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -27,7 +23,40 @@ const Contact = () => {
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = (e) => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .send(
+        "service_gjcnadk",
+        "template_g4c0d1s",
+        {
+          from_name: form.name,
+          to_name: "Fernando",
+          from_email: form.email,
+          to_email: "fgjv06@gmail.com",
+          message: form.message,
+        },
+        "luj2Edu7SQign2uYw"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Gracias. Me pondré en contacto contigo lo antes posible.");
+
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setLoading(false);
+          alert("Algo salió mal. Por favor, inténtalo de nuevo.");
+        }
+      );
+  };
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
