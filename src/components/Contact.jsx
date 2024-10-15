@@ -22,7 +22,69 @@ const Contact = () => {
   const handleSubmit = (e) => {};
 
   return (
-    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden"></div>
+    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
+      <motion.div
+        variants={slideIn("left", "tween", 0.2, 1)}
+        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+      >
+        <p className={styles.sectionSubText}>Mantente en</p>
+        <h3 className={styles.sectionHeadText}>Contacto</h3>
+
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="mt-12 flex flex-col gap-8"
+        >
+          <label className="flex flex-col">
+            <span className="text white font-medium mb-4">
+              Nombre y Apellido
+            </span>
+            <input
+              type="text"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+              placeholder="Nombre completo"
+              required
+              className="bg-tertiary py-4 px-6 rounded-lg
+              text-white placeholder:text-secondary outline-none border-none font-medium"
+            />
+          </label>
+          <label className="flex flex-col">
+            <span className="text white font-medium mb-4">Email</span>
+            <input
+              type="email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="Correo electrónico"
+              required
+              className="bg-tertiary py-4 px-6 rounded-lg
+              text-white placeholder:text-secondary outline-none border-none font-medium"
+            />
+          </label>
+          <label className="flex flex-col">
+            <span className="text white font-medium mb-4">Mensaje</span>
+            <textarea
+              rows="7"
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              placeholder="¿Qué deseas decirme?"
+              required
+              className="bg-tertiary py-4 px-6 rounded-lg
+              text-white placeholder:text-secondary outline-none border-none font-medium"
+            />
+          </label>
+          <button
+            type="submit"
+            className="bg-tertiary green-pink-gradient py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+          >
+            {loading ? "Enviando..." : "Enviar"}
+          </button>
+        </form>
+      </motion.div>
+    </div>
   );
 };
 
