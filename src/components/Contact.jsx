@@ -7,6 +7,10 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+// luj2Edu7SQign2uYw
+// template_g4c0d1s
+// service_gjcnadk
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -17,7 +21,11 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setForm({ ...form, [name]: value });
+  };
 
   const handleSubmit = (e) => {};
 
