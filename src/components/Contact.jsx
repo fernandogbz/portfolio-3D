@@ -21,7 +21,9 @@ const Contact = () => {
 
   const handleSubmit = (e) => {};
 
-  return <div>Contact</div>;
+  return (
+    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden"></div>
+  );
 };
 
-export default Contact;
+export default SectionWrapper(Contact, "contact");
