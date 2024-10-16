@@ -137,16 +137,16 @@ const experiences = [
     ],
   },
   {
-    title: "React Native Developer",
+    title: "Desarrollador Frontend",
     company_name: "Tesla",
     icon: tesla,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Fecha",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Desarrollar y mantener aplicaciones web utilizando React.js y otras tecnologías relacionadas.",
+      "Colaborar con equipos multifuncionales, incluidos diseñadores, gerentes de productos y otros desarrolladores, para crear productos de alta calidad.",
+      "Implementar un diseño responsivo y garantizar la compatibilidad entre navegadores.",
+      "Participar en revisiones de código y brindar comentarios constructivos a otros desarrolladores.",
     ],
   },
   {
@@ -156,23 +156,10 @@ const experiences = [
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Desarrollar y mantener aplicaciones web utilizando React.js y otras tecnologías relacionadas.",
+      "Colaborar con equipos multifuncionales, incluidos diseñadores, gerentes de productos y otros desarrolladores, para crear productos de alta calidad.",
+      "Implementar un diseño responsivo y garantizar la compatibilidad entre navegadores.",
+      "Participar en revisiones de código y brindar comentarios constructivos a otros desarrolladores.",
     ],
   },
 ];
@@ -180,33 +167,33 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
+      "Lorem ipsum odor amet, consectetuer adipiscing elit. Venenatis praesent conubia mattis risus sit elementum justo consequat tempus vivamus",
+    name: "Jane Doe",
+    designation: "CEO",
     company: "Acme Co",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+      "Lorem ipsum odor amet, consectetuer adipiscing elit. Venenatis praesent",
+    name: "Jane Doe",
+    designation: "CEO",
+    company: "Acme Co",
+    image: "https://randomuser.me/api/portraits/men/1.jpg",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
+      "Lorem ipsum odor amet, consectetuer adipiscing elit. Venenatis praesent conubia mattis risus sit elementum justo consequat tempus vivamus adipiscing.",
+    name: "Jane Doe",
+    designation: "CEO",
+    company: "Acme Co",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Project name",
     description:
       "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
     tags: [
@@ -227,7 +214,7 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "Project name",
     description:
       "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
     tags: [
@@ -248,7 +235,7 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "Project name",
     description:
       "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
     tags: [
