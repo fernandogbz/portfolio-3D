@@ -5,16 +5,22 @@ import {
   web,
   javascript,
   typescript,
+  java,
+  spring,
   html,
   css,
+  bootstrap,
   reactjs,
   redux,
+  python,
   tailwind,
   nodejs,
   mongodb,
+  mysql,
   git,
   figma,
   docker,
+  threejs,
   meta,
   starbucks,
   tesla,
@@ -22,7 +28,6 @@ import {
   carrent,
   jobit,
   tripguide,
-  threejs,
 } from "../assets";
 
 export const navLinks = [
@@ -69,37 +74,49 @@ const technologies = [
     icon: css,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
+    name: "Tailwind CSS",
+    icon: tailwind,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
+    name: "Bootstrap",
+    icon: bootstrap,
+  },
+  {
+    name: "JavaScript",
+    icon: javascript,
   },
   {
     name: "React JS",
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
     name: "Three JS",
     icon: threejs,
   },
+  {
+    name: "Java",
+    icon: java,
+  },
+  {
+    name: "Spring Boot",
+    icon: spring,
+  },
+  {
+    name: "Python",
+    icon: python,
+  },
+  // {
+  //   name: "Node JS",
+  //   icon: nodejs,
+  // },
+  {
+    name: "MySQL",
+    icon: mysql,
+  },
+  // {
+  //   name: "MongoDB",
+  //   icon: mongodb,
+  // },
   {
     name: "git",
     icon: git,
@@ -108,10 +125,10 @@ const technologies = [
     name: "figma",
     icon: figma,
   },
-  {
-    name: "docker",
-    icon: docker,
-  },
+  // {
+  //   name: "docker",
+  //   icon: docker,
+  // },
 ];
 
 const experiences = [
@@ -142,19 +159,6 @@ const experiences = [
     icon: tesla,
     iconBg: "#E6DEDD",
     date: "Fecha",
-    points: [
-      "Desarrollar y mantener aplicaciones web utilizando React.js y otras tecnologías relacionadas.",
-      "Colaborar con equipos multifuncionales, incluidos diseñadores, gerentes de productos y otros desarrolladores, para crear productos de alta calidad.",
-      "Implementar un diseño responsivo y garantizar la compatibilidad entre navegadores.",
-      "Participar en revisiones de código y brindar comentarios constructivos a otros desarrolladores.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
     points: [
       "Desarrollar y mantener aplicaciones web utilizando React.js y otras tecnologías relacionadas.",
       "Colaborar con equipos multifuncionales, incluidos diseñadores, gerentes de productos y otros desarrolladores, para crear productos de alta calidad.",
