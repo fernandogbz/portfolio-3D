@@ -37,6 +37,9 @@ import codingDojo from "./company/codingdojo.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import cabanas from "./cabanas.png";
+import imgallery from "./imgallery.png";
+import moneymanager from "./moneymanager.png";
 
 export {
   fjlogo,
@@ -70,8 +73,11 @@ export {
   shopify,
   starbucks,
   tesla,
+  codingDojo,
   carrent,
   jobit,
   tripguide,
-  codingDojo,
+  cabanas,
+  imgallery,
+  moneymanager,
 };

@@ -22,6 +22,7 @@ import {
   docker,
   threejs,
   wordpress,
+  codingDojo,
   meta,
   starbucks,
   tesla,
@@ -29,7 +30,9 @@ import {
   carrent,
   jobit,
   tripguide,
-  codingDojo,
+  cabanas,
+  imgallery,
+  moneymanager,
 } from "../assets";
 
 export const navLinks = [
@@ -199,7 +202,7 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Project name",
+    name: "Money Manager",
     description:
       "Aplicación web para controlar gastos, permite al usuario ingresar un presupuesto, agregar, editar, eliminar gastos y filtrarlos por categoría. Muestra el balance entre el presupuesto y los gastos, y el porcentaje de gastos en cada categoría.",
     tags: [
@@ -216,11 +219,11 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: moneymanager,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Project name",
+    name: "Image Gallery",
     description:
       "Página web para buscar y descargar imágenes de stock, inspirada en el sitio web de Pexels. Integré una api que me permitía acceder a miles de imágenes de alta calidad y libres de derechos.",
     tags: [
@@ -237,7 +240,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: imgallery,
     source_code_link: "https://github.com/",
   },
   {
@@ -258,7 +261,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: cabanas,
     source_code_link: "https://github.com/",
   },
 ];
