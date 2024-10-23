@@ -27,6 +27,7 @@ const Ball = (props) => {
         />
         <Decal
           map={decal}
+          scale={0.9}
           position={[0, 0, 1]}
           rotation={[0, 0, 0]}
           flatShading
