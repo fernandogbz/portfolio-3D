@@ -28,6 +28,7 @@ import {
   carrent,
   jobit,
   tripguide,
+  codingdojo,
 } from "../assets";
 
 export const navLinks = [
@@ -135,7 +136,7 @@ const experiences = [
   {
     title: "Desarrollador Full Stack Java",
     company_name: "Coding Dojo",
-    icon: starbucks,
+    icon: codingdojo,
     iconBg: "#383E56",
     date: "Enero 2024 - Junio 2024",
     points: [
