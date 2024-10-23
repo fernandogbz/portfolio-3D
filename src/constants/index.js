@@ -123,10 +123,10 @@ const technologies = [
     name: "Git",
     icon: git,
   },
-  {
-    name: "Figma",
-    icon: figma,
-  },
+  // {
+  //   name: "Figma",
+  //   icon: figma,
+  // },
   {
     name: "Wordpress",
     icon: wordpress,
