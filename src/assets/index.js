@@ -26,12 +26,13 @@ import spring from "./tech/spring.svg";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import wordpress from "./tech/wordpress.svg";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
-import codingdojo from "./company/codingdojo.png";
+import codingDojo from "./company/codingdojo.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -64,6 +65,7 @@ export {
   tailwind,
   typescript,
   threejs,
+  wordpress,
   meta,
   shopify,
   starbucks,
@@ -71,5 +73,5 @@ export {
   carrent,
   jobit,
   tripguide,
-  codingdojo,
+  codingDojo,
 };

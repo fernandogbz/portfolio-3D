@@ -21,6 +21,7 @@ import {
   figma,
   docker,
   threejs,
+  wordpress,
   meta,
   starbucks,
   tesla,
@@ -28,7 +29,7 @@ import {
   carrent,
   jobit,
   tripguide,
-  codingdojo,
+  codingDojo,
 } from "../assets";
 
 export const navLinks = [
@@ -119,24 +120,24 @@ const technologies = [
   //   icon: mongodb,
   // },
   {
-    name: "git",
+    name: "Git",
     icon: git,
   },
   {
-    name: "figma",
+    name: "Figma",
     icon: figma,
   },
-  // {
-  //   name: "docker",
-  //   icon: docker,
-  // },
+  {
+    name: "Wordpress",
+    icon: wordpress,
+  },
 ];
 
 const experiences = [
   {
     title: "Desarrollador Full Stack Java",
     company_name: "Coding Dojo",
-    icon: codingdojo,
+    icon: codingDojo,
     iconBg: "#383E56",
     date: "Enero 2024 - Junio 2024",
     points: [
