@@ -38,7 +38,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4 text-secondary text-[17px] text-justify max-w-3xl leading-[30px]"
       >
         Soy un desarrollador web con más de 2 años de experiencia en JavaScript
         y Java, utilizando frameworks como React y Three.js para el desarrollo
