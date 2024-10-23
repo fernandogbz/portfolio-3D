@@ -220,7 +220,7 @@ const projects = [
       },
     ],
     image: moneymanager,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/fernandogbz/money-manager",
   },
   {
     name: "Image Gallery",
@@ -241,7 +241,7 @@ const projects = [
       },
     ],
     image: imgallery,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/fernandogbz/image-gallery",
   },
   {
     name: "Camping y Cabañas Río Coreo",
