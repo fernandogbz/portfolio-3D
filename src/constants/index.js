@@ -241,20 +241,20 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Project name",
+    name: "Camping y Cabañas Río Coreo",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Plataforma web que permite a los usuarios buscar, reservar y pagar cabañas, para un complejo turístico llamado Cabañas Río Coreo, proporcionando una solución conveniente y eficiente para las necesidades del cliente.",
     tags: [
       {
-        name: "nextjs",
+        name: "wordpress",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "mysql",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "cloudflare",
         color: "pink-text-gradient",
       },
     ],
