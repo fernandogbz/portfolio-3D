@@ -70,7 +70,7 @@ const Works = () => {
       <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          className="mt-4 text-secondary text-[17px] text-justify max-w-3xl leading-[30px]"
         >
           Los siguientes proyectos muestran mis habilidades y experiencia a
           través de ejemplos reales de mi trabajo. Cada proyecto se describe
@@ -79,7 +79,7 @@ const Works = () => {
           con diferentes tecnologías y gestionar proyectos de manera eficaz.
         </motion.p>
       </div>
-      <div className="mt-20 flex flex-wrap gap-7 justify-center">
+      <div className="mt-20 flex flex-wrap gap-7 justify-center text-justify">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
