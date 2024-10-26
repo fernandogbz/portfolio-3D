@@ -24,6 +24,7 @@ import {
   wordpress,
   codingDojo,
   inacap,
+  egg,
   meta,
   starbucks,
   tesla,
@@ -188,8 +189,8 @@ const experiences = [
   {
     title: "Programación desde Cero",
     company_name: "Egg Educación",
-    icon: codingDojo,
-    iconBg: "#383E56",
+    icon: egg,
+    iconBg: "#E6DEDD",
     date: "Agosto 2022 - Octubre 2022",
     points: [
       "Adquirí nociones de fundamentos de programación aplicados de forma práctica.",
