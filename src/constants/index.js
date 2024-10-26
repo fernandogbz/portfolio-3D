@@ -254,7 +254,7 @@ const projects = [
     ],
     image: moneymanager,
     source_code_link: "https://github.com/fernandogbz/money-manager",
-    live_preview: "https://github.com/fernandogbz/money-manager",
+    live_preview: "https://money-manager-012f80.netlify.app/",
   },
   {
     name: "Image Gallery",
@@ -276,7 +276,7 @@ const projects = [
     ],
     image: imgallery,
     source_code_link: "https://github.com/fernandogbz/image-gallery",
-    live_preview: "https://github.com/fernandogbz/image-gallery",
+    live_preview: "https://fernandogbz.github.io/image-gallery/",
   },
   {
     name: "Camping y Cabañas Río Coreo",
@@ -298,7 +298,7 @@ const projects = [
     ],
     image: cabanas,
     source_code_link: "https://github.com/",
-    live_preview: "https://github.com/",
+    live_preview: "https://cabanasriocoreo.pages.dev/",
   },
 ];
 
