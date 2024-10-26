@@ -138,8 +138,34 @@ const technologies = [
 
 const experiences = [
   {
+    title: "Analista Programador",
+    company_name: "Inacap",
+    icon: tesla,
+    iconBg: "#E6DEDD",
+    date: "Marzo 2024 - Actualidad",
+    points: [
+      "Desarrollé habilidades de análisis y programación de aplicaciones en diversas plataformas tecnológicas, así como la creación y diagramación de componentes de sistemas informáticos utilizando metodologías ágiles, entregando soporte y mantención, y realizando pruebas de calidad y protección de la información.",
+
+      "Adquirí una sólida base en pensamiento lógico y matemático, lo cual fortalece mi capacidad de análisis y resolución de problemas.",
+
+      "Aprendí a diseñar, programar y gestionar estructuras de bases de datos, normalizando esquemas y estableciendo relaciones entre entidades, para el desarrollo adecuado de componentes de sistemas de acuerdo con las necesidades del negocio.",
+
+      "Configuré y preparé entornos operativos, permitiendo establecer infraestructuras tecnológicas robustas y soluciones de software en base a componentes nuevos y/o existentes, adaptados de acuerdo con el ciclo de vida y las necesidades del desarrollo seguro del software",
+
+      "Me familiaricé con el desarrollo de sistemas multiplataforma, siguiendo estándares de la industria para garantizar la compatibilidad entre hardware y software.",
+
+      "Realicé proyectos prácticos en los que apliqué técnicas avanzadas de programación, resolviendo desafíos de complejidad creciente y reforzando las competencias técnicas.",
+
+      "Enfrenté tareas que requieren la identificación de requisitos y la satisfacción de necesidades del usuario, aplicando un enfoque en el análisis ágil.",
+
+      "Consolidé competencias transversales como el trabajo en equipo, la identificación y resolución de problemas, así como la comunicación efectiva, mejorando la colaboración en proyectos y la interacción con otros profesionales y clientes en diferentes contextos.",
+
+      "Me preparé en temas de emprendimiento, innovación y gestión de proyectos,enfocandome en el aprendizaje y la actualización continua de mis conocimientos para responder a la evolución constante de la industria, permitiendome adaptarme al entorno laboral y contribuir con soluciones tecnológicas en el mercado.     ",
+    ],
+  },
+  {
     title: "Desarrollador Full Stack Java",
-    company_name: "Coding Dojo",
+    company_name: "Coding Dojo - Forge",
     icon: codingDojo,
     iconBg: "#383E56",
     date: "Enero 2024 - Junio 2024",
@@ -156,19 +182,6 @@ const experiences = [
 
       "Colaboré con equipos multifuncionales, incluidos facilitadores, profesores y otros desarrolladores, fomentando la generación de ideas y la resolución conjunta de problemas.",
       "Participé en revisiones de código y brindé comentarios constructivos a otros desarrolladores.",
-    ],
-  },
-  {
-    title: "Desarrollador Frontend",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Fecha",
-    points: [
-      "Desarrollar y mantener aplicaciones web utilizando React.js y otras tecnologías relacionadas.",
-      "Colaborar con equipos multifuncionales, incluidos diseñadores, gerentes de productos y otros desarrolladores, para crear productos de alta calidad.",
-      "Implementar un diseño responsivo y garantizar la compatibilidad entre navegadores.",
-      "Participar en revisiones de código y brindar comentarios constructivos a otros desarrolladores.",
     ],
   },
 ];
