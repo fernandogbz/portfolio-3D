@@ -34,6 +34,7 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import codingDojo from "./company/codingdojo.png";
 import inacap from "./company/inacap.png";
+import egg from "./company/egg.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -76,6 +77,7 @@ export {
   tesla,
   codingDojo,
   inacap,
+  egg,
   carrent,
   jobit,
   tripguide,
