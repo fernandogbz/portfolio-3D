@@ -23,6 +23,7 @@ import {
   threejs,
   wordpress,
   codingDojo,
+  inacap,
   meta,
   starbucks,
   tesla,
@@ -140,7 +141,7 @@ const experiences = [
   {
     title: "Analista Programador",
     company_name: "Inacap",
-    icon: tesla,
+    icon: inacap,
     iconBg: "#E6DEDD",
     date: "Marzo 2024 - Actualidad",
     points: [
