@@ -185,6 +185,24 @@ const experiences = [
       "Participé en revisiones de código y brindé comentarios constructivos a otros desarrolladores.",
     ],
   },
+  {
+    title: "Programación desde Cero",
+    company_name: "Egg Educación",
+    icon: codingDojo,
+    iconBg: "#383E56",
+    date: "Agosto 2022 - Octubre 2022",
+    points: [
+      "Adquirí nociones de fundamentos de programación aplicados de forma práctica.",
+
+      "Impulsé el desarrollo de mi pensamiento lógico, permitiendome estructurar algoritmos en pseudocódigo, aplicando conceptos clave de programación como variables, tipos de datos, condicionales, bucles y funciones para resolver problemas secuencialmente.",
+
+      "Aprendí a utilizar herramientas de desarrollo y entornos de programación, para escribir y ejecutar código, depurar errores y optimizar la eficiencia de los programas.",
+
+      "Participé activamente en clases en vivo, siguiendo lecciones en tiempo real.",
+
+      "Colaboré en grupos, potenciando la resolución de problemas en conjunto y el aprendizaje en equipo.",
+    ],
+  },
 ];
 
 const testimonials = [
