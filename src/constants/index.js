@@ -150,7 +150,7 @@ const experiences = [
 
       "Adquirí una sólida base en pensamiento lógico y matemático, lo cual fortalece mi capacidad de análisis y resolución de problemas.",
 
-      "Aprendí a diseñar, programar y gestionar estructuras de bases de datos, normalizando esquemas y estableciendo relaciones entre entidades, para el desarrollo adecuado de componentes de sistemas de acuerdo con las necesidades del negocio.",
+      "Diseñé, programé y gestioné estructuras de bases de datos, normalizando esquemas y estableciendo relaciones entre entidades, para el desarrollo adecuado de componentes de sistemas de acuerdo con las necesidades del negocio.",
 
       "Configuré y preparé entornos operativos, permitiendo establecer infraestructuras tecnológicas robustas y soluciones de software en base a componentes nuevos y/o existentes, adaptados de acuerdo con el ciclo de vida y las necesidades del desarrollo seguro del software",
 
