@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 
+import { fotofer } from "../assets";
+
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
@@ -15,15 +17,20 @@ const Hero = () => {
             <div className="w-5 h-5 rounded-full bg-[#915eff]" />
             <div className="w-1 sm:h-80 h-40 violet-gradient" />
           </div>
-          <div>
-            <h1 className={`${styles.heroHeadText} text-white`}>
-              Hola, soy <span className="text-[#915eff]">Fernando</span>
-            </h1>
-            <p className={`${styles.heroSubText} mt-2 text-white`}>
-              {" "}
-              Desarrollo interfaces de usuario{" "}
-              <br className="sm:block hidden" /> y aplicaciones web
-            </p>
+          <div className="flex align-center gap-10">
+            <div>
+              <h1 className={`${styles.heroHeadText} text-white`}>
+                Hola, soy <span className="text-[#915eff]">Fernando</span>
+              </h1>
+              <p className={`${styles.heroSubText} mt-2 text-white`}>
+                {" "}
+                Desarrollo interfaces de usuario{" "}
+                <br className="sm:block hidden" /> y aplicaciones web
+              </p>
+            </div>
+            <picture className="w-[20%] overflow-hidden object-contain rounded-full border-4 border-[#915eff] sm:block hidden">
+              <img src={fotofer} alt="foto-fernando" />
+            </picture>
           </div>
         </div>
         <ComputersCanvas />
