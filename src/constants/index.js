@@ -297,7 +297,7 @@ const projects = [
       },
     ],
     image: cabanas,
-    source_code_link: "https://github.com/",
+    source_code_link: "",
     live_preview: "https://cabanasriocoreo.pages.dev/",
   },
 ];
