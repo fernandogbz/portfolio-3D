@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import fjlogo from "./fj-logo.png";
-import fotofer from "./foto-fernando.webp";
+import fotofer from "./foto-fer.webp";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
