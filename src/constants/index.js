@@ -35,6 +35,7 @@ import {
   cabanas,
   imgallery,
   moneymanager,
+  thrazos,
 } from "../assets";
 
 export const navLinks = [
@@ -235,26 +236,47 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Money Manager",
+    "name": "Thrazos",
+    "description": "Plataforma web desarrollada para Thrazos, enfocada en construir una presencia digital sólida que comunique de forma clara y atractiva sus servicios, proyectos y propuesta de valor. El objetivo principal fue crear una experiencia visual moderna y dinámica que refleje el enfoque creativo de la marca, junto con una navegación fluida y optimizada para contenido multimedia.",
+    "tags": [
+      {
+        "name": "framer",
+        "color": "blue-text-gradient"
+      },
+      {
+        "name": "google analytics",
+        "color": "green-text-gradient"
+      },
+      {
+        "name": "google calendar",
+        "color": "pink-text-gradient"
+      }
+    ],
+    image: thrazos,
+    "source_code_link": "",
+    "live_preview": "https://www.thrazos.com/"
+  },
+  {
+    name: "Camping y Cabañas Río Coreo",
     description:
-      "Aplicación web para controlar gastos, permite al usuario ingresar un presupuesto, agregar, editar, eliminar gastos y filtrarlos por categoría. Muestra el balance entre el presupuesto y los gastos, y el porcentaje de gastos en cada categoría.",
+      "Plataforma web que permite a los usuarios buscar, reservar y pagar cabañas, para un complejo turístico llamado Cabañas Río Coreo, proporcionando una solución conveniente y eficiente para las necesidades del cliente.",
     tags: [
       {
-        name: "react",
+        name: "wordpress",
         color: "blue-text-gradient",
       },
       {
-        name: "css",
+        name: "mysql",
         color: "green-text-gradient",
       },
       {
-        name: "localStorage",
+        name: "cloudflare",
         color: "pink-text-gradient",
       },
     ],
-    image: moneymanager,
-    source_code_link: "https://github.com/fernandogbz/money-manager",
-    live_preview: "https://money-manager-012f80.netlify.app/",
+    image: cabanas,
+    source_code_link: "",
+    live_preview: "https://cabanasriocoreo.pages.dev/",
   },
   {
     name: "Image Gallery",
@@ -279,26 +301,26 @@ const projects = [
     live_preview: "https://fernandogbz.github.io/image-gallery/",
   },
   {
-    name: "Camping y Cabañas Río Coreo",
+    name: "Money Manager",
     description:
-      "Plataforma web que permite a los usuarios buscar, reservar y pagar cabañas, para un complejo turístico llamado Cabañas Río Coreo, proporcionando una solución conveniente y eficiente para las necesidades del cliente.",
+      "Aplicación web para controlar gastos, permite al usuario ingresar un presupuesto, agregar, editar, eliminar gastos y filtrarlos por categoría. Muestra el balance entre el presupuesto y los gastos, y el porcentaje de gastos en cada categoría.",
     tags: [
       {
-        name: "wordpress",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mysql",
+        name: "css",
         color: "green-text-gradient",
       },
       {
-        name: "cloudflare",
+        name: "localStorage",
         color: "pink-text-gradient",
       },
     ],
-    image: cabanas,
-    source_code_link: "",
-    live_preview: "https://cabanasriocoreo.pages.dev/",
+    image: moneymanager,
+    source_code_link: "https://github.com/fernandogbz/money-manager",
+    live_preview: "https://money-manager-012f80.netlify.app/",
   },
 ];
 

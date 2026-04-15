@@ -44,6 +44,7 @@ import tripguide from "./tripguide.png";
 import cabanas from "./cabanas.png";
 import imgallery from "./imgallery.png";
 import moneymanager from "./moneymanager.png";
+import thrazos from "./thrazos.png";
 
 export {
   fjlogo,
@@ -88,4 +89,5 @@ export {
   cabanas,
   imgallery,
   moneymanager,
+  thrazos,
 };

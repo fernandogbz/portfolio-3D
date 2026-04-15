@@ -1,9 +1,10 @@
 import { BrowserRouter } from "react-router-dom";
+import videoGrid from "./assets/video-grid.webm";
+import videoLine from "./assets/video-line.webm";
 import {
   About,
   Contact,
   Experience,
-  Feedbacks,
   Hero,
   Navbar,
   Tech,
@@ -19,10 +20,62 @@ const App = () => {
           <Navbar />
           <Hero />
         </div>
-        <About />
-        <Experience />
-        <Tech />
+        <div className="bg-about-pattern bg-[length:100%_auto] bg-no-repeat bg-[position:50%_106%]">
+          <About />
+        </div>
+        {/* <div className="relative z-50 -mt-16 -mb-16">
+          <div className="mx-auto w-full max-w-7xl rounded-xl">
+            <video
+              src={videoLine}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              className="mx-auto block w-full h-72 object-contain opacity-100"
+            />
+          </div>
+        </div> */}
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-experience-pattern bg-[length:100%_107%] bg-no-repeat bg-center scale-100 scale-x-[-1]" />
+          <div className="relative z-10">
+            <Experience />
+          </div>
+        </div>
+        <div className="relative w-full h-[550px] overflow-hidden bg-primary">
+          <video
+            className="absolute inset-0 h-full w-full object-contain scale-100"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src={videoGrid} type="video/webm" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-transparent to-primary pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary from-5% via-transparent via-50% to-primary to-95% pointer-events-none" />
+          <div className="relative z-10 w-full pb-0">
+            <div className="max-w-7xl mx-auto">
+              <Tech />
+            </div>
+          </div>
+        </div>
         <Works />
+        <div className="relative z-20 w-full h-[260px] overflow-hidden bg-primary">
+          <video
+            className="absolute inset-0 h-full w-full object-cover scale-155"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+          >
+            <source src={videoLine} type="video/webm" />
+          </video>
+          {/* <div className="absolute inset-0 bg-gradient-to-r from-primary via-transparent to-primary pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary from-10% via-transparent via-50% to-primary to-90% pointer-events-none" /> */}
+          <div className="relative z-10 w-full h-full" />
+        </div>
         {/* <Feedbacks /> */}
         <div className="relative z-0">
           <Contact />
