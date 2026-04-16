@@ -5,14 +5,28 @@ import BlurText from "../utils/BlurText";
 
 import { fotofer } from "../assets";
 
-import { ComputersCanvas } from "./canvas";
+import { ComputersCanvas, Waves } from "./canvas";
 
 const Hero = () => {
   return (
     <>
-      <section className="relative w-full h-screen mx-auto">
+      <section className="relative w-full h-screen mx-auto bg-hero-pattern bg-cover bg-no-repeat bg-center">
+        <Waves
+          lineColor="rgba(145, 94, 255, 0.15)" 
+          backgroundColor="transparent"
+          waveSpeedX={0.03}
+          waveSpeedY={0.008}
+          waveAmpX={35}
+          waveAmpY={18}
+          xGap={14}
+          yGap={40}
+          friction={0.92}
+          tension={0.008}
+          maxCursorMove={110}
+          className="absolute inset-0 z-0"
+        />
         <div
-          className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row align-middle items-start gap-5`}
+          className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row align-middle items-start gap-5 z-20 pointer-events-none`}
         >
           <picture className="w-[20%] overflow-hidden object-contain rounded-full border-4 border-[#915eff] sm:block hidden">
             <img src={fotofer} alt="foto-fernando" />
@@ -54,8 +68,10 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <ComputersCanvas />
-        <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+        <div className="relative z-30 w-full h-full">
+          <ComputersCanvas />
+        </div>
+        <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-40 pointer-events-auto">
           <a href="#about">
             <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
               <motion.div
