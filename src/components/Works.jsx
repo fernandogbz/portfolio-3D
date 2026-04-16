@@ -107,4 +107,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "work");
+export default SectionWrapper(Works, "work", "sm:px-16 px-6 pt-0 pb-10");
