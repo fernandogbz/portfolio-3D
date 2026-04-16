@@ -5,6 +5,7 @@ import { styles } from "../styles";
 import { github, livepreview } from "../assets";
 import { projects } from "../constants";
 import { SectionWrapper } from "../hoc";
+import BlurText from "../utils/BlurText";
 import { fadeIn, textVariant } from "../utils/motion";
 
 // Add the tech, github link and demo link to the project object
@@ -83,7 +84,12 @@ const Works = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>¿Qué he hecho hasta ahora?</p>
-        <h2 className={styles.sectionHeadText}>Proyectos</h2>
+        <BlurText
+          as="h2"
+          text="Proyectos"
+          animateBy="words"
+          className={styles.sectionHeadText}
+        />
       </motion.div>
 
       <div className="w-full flex">

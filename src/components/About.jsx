@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { services } from "../constants";
+import BlurText from "../utils/BlurText";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 
@@ -33,7 +34,12 @@ const About = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introducción</p>
-        <h2 className={styles.sectionHeadText}>Sobre mí</h2>
+        <BlurText
+          as="h2"
+          text="Sobre mí"
+          animateBy="words"
+          className={styles.sectionHeadText}
+        />
       </motion.div>
 
       <motion.p

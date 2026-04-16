@@ -13,6 +13,7 @@ import { experiences } from "../constants";
 
 import { SectionWrapper } from "../hoc";
 
+import BlurText from "../utils/BlurText";
 import { textVariant } from "../utils/motion";
 
 const ExperienceCard = ({ experience }) => (
@@ -59,7 +60,12 @@ const Experience = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Mi camino</p>
-        <h2 className={styles.sectionHeadText}>Formación</h2>
+        <BlurText
+          as="h2"
+          text="Formación"
+          animateBy="words"
+          className={styles.sectionHeadText}
+        />
       </motion.div>
       <div className="mt-20 flex flex-col text-pretty">
         <VerticalTimeline>

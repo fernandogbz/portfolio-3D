@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
+import BlurText from "../utils/BlurText";
 
 import { fotofer } from "../assets";
 
@@ -23,12 +24,32 @@ const Hero = () => {
           <div className="flex align-center gap-10">
             <div>
               <h1 className={`${styles.heroHeadText} text-white`}>
-                Hola, soy <span className="text-[#915eff]">Fernando</span>
+                <BlurText
+                  as="span"
+                  text="Hola, soy Fernando"
+                  animateBy="words"
+                  delay={95}
+                  className="inline-flex"
+                  highlightWords={["Fernando"]}
+                  highlightClassName="text-[#915eff]"
+                />
               </h1>
               <p className={`${styles.heroSubText} mt-2 text-white`}>
-                {" "}
-                Desarrollo interfaces de usuario{" "}
-                <br className="sm:block hidden" /> y aplicaciones web
+                <BlurText
+                  as="span"
+                  text="Desarrollo interfaces de usuario"
+                  animateBy="words"
+                  delay={70}
+                  className="inline-flex"
+                />
+                <br className="sm:block hidden" />
+                <BlurText
+                  as="span"
+                  text="y aplicaciones web"
+                  animateBy="words"
+                  delay={70}
+                  className="inline-flex"
+                />
               </p>
             </div>
           </div>

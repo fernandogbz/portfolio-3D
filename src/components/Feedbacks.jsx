@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
+import BlurText from "../utils/BlurText";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
 
@@ -48,7 +49,12 @@ const Feedbacks = () => {
       >
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>¿Que dicen sobre mi trabajo?</p>
-          <h2 className={styles.sectionHeadText}>Testimonios</h2>
+          <BlurText
+            as="h2"
+            text="Testimonios"
+            animateBy="words"
+            className={styles.sectionHeadText}
+          />
         </motion.div>
       </div>
       <div

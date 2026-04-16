@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
+import BlurText from "../utils/BlurText";
 import { slideIn } from "../utils/motion";
 
 const Contact = () => {
@@ -65,7 +66,12 @@ const Contact = () => {
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Mantente en</p>
-        <h3 className={styles.sectionHeadText}>Contacto</h3>
+        <BlurText
+          as="h3"
+          text="Contacto"
+          animateBy="words"
+          className={styles.sectionHeadText}
+        />
 
         <form
           ref={formRef}
