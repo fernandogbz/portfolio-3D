@@ -67,8 +67,8 @@ const Experience = () => {
           className={styles.sectionHeadText}
         />
       </motion.div>
-      <div className="mt-20 flex flex-col text-pretty">
-        <VerticalTimeline>
+      <div className="mt-8 flex flex-col text-pretty">
+        <VerticalTimeline className="experience-timeline">
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
           ))}
@@ -78,4 +78,4 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, "");
+export default SectionWrapper(Experience, "", "sm:px-16 px-6 sm:py-10 py-8");

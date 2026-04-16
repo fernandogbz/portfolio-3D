@@ -114,6 +114,10 @@
   -webkit-text-fill-color: transparent;
 }
 
+.experience-timeline {
+  padding-top: 0;
+}
+
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;
