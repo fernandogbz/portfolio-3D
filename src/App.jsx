@@ -20,7 +20,7 @@ const App = () => {
           <Navbar />
           <Hero />
         </div>
-        <div className="bg-about-pattern bg-[length:100%_auto] bg-no-repeat bg-[position:50%_106%]">
+        <div className="bg-about-pattern bg-[length:100%_auto] bg-no-repeat bg-[position:50%_93%]">
           <About />
         </div>
         {/* <div className="relative z-50 -mt-16 -mb-16">
