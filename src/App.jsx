@@ -29,7 +29,7 @@ const App = () => {
             <Experience />
           </div>
         </div>
-        <div className="relative z-20 w-full h-[100px] overflow-hidden bg-primary p-0">
+        <div className="relative z-0 w-full h-[100px] overflow-hidden bg-primary p-0">
           <video
             className="absolute inset-0 h-full w-full object-cover scale-155"
             autoPlay
@@ -65,7 +65,7 @@ const App = () => {
         <div className="bg-works-pattern bg-[length:170%_100%] bg-no-repeat bg-center">
           <Works />
         </div>
-        <div className="relative z-20 w-full h-[200px] overflow-hidden bg-primary p-0">
+        <div className="relative z-0 w-full h-[200px] overflow-hidden bg-primary p-0">
           <video
             className="absolute inset-0 h-full w-full object-cover scale-155"
             autoPlay
