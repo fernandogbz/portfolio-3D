@@ -118,6 +118,59 @@
   padding-top: 0;
 }
 
+.experience-timeline::before {
+  background: transparent !important;
+}
+
+.experience-scroll-line,
+.experience-scroll-line-fill {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  border-radius: 9999px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.experience-scroll-line {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.experience-scroll-line-fill {
+  background: linear-gradient(180deg, #c084fc 0%, #38bdf8 50%, #f472b6 100%);
+  box-shadow: 0 0 12px rgba(192, 132, 252, 0.45), 0 0 28px rgba(56, 189, 248, 0.25);
+}
+
+.experience-timeline {
+  position: relative;
+  z-index: 1;
+}
+
+.experience-icon-glow-wrap {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 18px;
+  width: 74px;
+  height: 74px;
+  border-radius: 9999px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.experience-icon-glow {
+  position: absolute;
+  inset: -10px;
+  border-radius: inherit;
+  background: radial-gradient(circle, rgba(192, 132, 252, 0.45) 0%, rgba(56, 189, 248, 0.24) 45%, rgba(244, 114, 182, 0.1) 70%, transparent 100%);
+  opacity: calc(var(--iconGlow, 0) * 0.9);
+  filter: blur(10px);
+  transition: opacity 160ms ease-out;
+}
+
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;
