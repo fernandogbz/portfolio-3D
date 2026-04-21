@@ -1,10 +1,10 @@
-import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { github, livepreview } from "../assets";
 import { projects } from "../constants";
 import { SectionWrapper } from "../hoc";
+import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import BlurText from "../utils/BlurText";
 import { fadeIn, textVariant } from "../utils/motion";
 
@@ -20,61 +20,71 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
-      >
-        <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-full object-cover rounded-2xl"
-          />
+      <CardContainer className="sm:w-[360px] w-full">
+        <CardBody className="bg-tertiary p-5 rounded-2xl w-full border border-white/10">
+          <CardItem translateZ={90} className="relative w-full h-[230px]">
+            <img
+              src={image}
+              alt={name}
+              className="w-full h-full object-cover rounded-2xl group-hover/card:shadow-xl"
+            />
 
-          <div className="absolute inset-0 flex flex-col justify-start items-end m-3 gap-1 card-img_hover">
-            {/* Github */}
-            {source_code_link && (
-              <div
-                onClick={() => window.open(source_code_link, "_blank")}
+            <div className="absolute inset-0 flex flex-col justify-start items-end m-3 gap-1 card-img_hover">
+              {/* Github */}
+              {source_code_link && (
+                <CardItem
+                  translateZ={120}
+                  onClick={() => window.open(source_code_link, "_blank")}
+                  className="black-gradient w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src={github}
+                    alt="github"
+                    className="w-7 h-7 object-contain"
+                  />
+                </CardItem>
+              )}
+              {/* Live Preview */}
+              <CardItem
+                translateZ={120}
+                onClick={() => window.open(live_preview, "_blank")}
                 className="black-gradient w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
               >
                 <img
-                  src={github}
-                  alt="github"
+                  src={livepreview}
+                  alt="live preview"
                   className="w-7 h-7 object-contain"
                 />
-              </div>
-            )}
-            {/* Live Preview */}
-            <div
-              onClick={() => window.open(live_preview, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
-            >
-              <img
-                src={livepreview}
-                alt="live preview"
-                className="w-7 h-7 object-contain"
-              />
+              </CardItem>
             </div>
-          </div>
-        </div>
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px] text-balance">
-            {name}
-          </h3>
-          <p className="text-secondary mt-2 text-[14px] text-pretty">
-            {description}
-          </p>
-        </div>
+          </CardItem>
 
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
-              {tag.name}
-            </p>
-          ))}
-        </div>
-      </Tilt>
+          <div className="mt-5">
+            <CardItem
+              as="h3"
+              translateZ={65}
+              className="text-white font-bold text-[24px] text-balance"
+            >
+              {name}
+            </CardItem>
+            <CardItem
+              as="p"
+              translateZ={45}
+              className="text-secondary mt-2 text-[14px] text-pretty"
+            >
+              {description}
+            </CardItem>
+          </div>
+
+          <CardItem translateZ={35} className="mt-4 flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+                {tag.name}
+              </p>
+            ))}
+          </CardItem>
+        </CardBody>
+      </CardContainer>
     </motion.div>
   );
 };
