@@ -47,6 +47,11 @@ function easeInCubic(x) {
   return x * x * x;
 }
 
+function lerpAngleDegrees(from, to, t) {
+  const delta = ((((to - from) % 360) + 540) % 360) - 180;
+  return (from + delta * t + 360) % 360;
+}
+
 function animateValue({
   start = 0,
   end = 100,
@@ -122,6 +127,33 @@ const BorderGlow = ({
   const [cursorAngle, setCursorAngle] = useState(preferredAngle);
   const [edgeProximity, setEdgeProximity] = useState(0);
   const [sweepActive, setSweepActive] = useState(false);
+  const [hoverBlend, setHoverBlend] = useState(0);
+  const hoverBlendRef = useRef(0);
+  const hoverAnimTokenRef = useRef(0);
+
+  useEffect(() => {
+    hoverBlendRef.current = hoverBlend;
+  }, [hoverBlend]);
+
+  const animateHoverBlend = useCallback((target, duration) => {
+    const token = ++hoverAnimTokenRef.current;
+    const start = hoverBlendRef.current;
+
+    animateValue({
+      start,
+      end: target,
+      duration,
+      ease: target > start ? easeOutCubic : easeInCubic,
+      onUpdate: (v) => {
+        if (token !== hoverAnimTokenRef.current) return;
+        setHoverBlend(v);
+      },
+      onEnd: () => {
+        if (token !== hoverAnimTokenRef.current) return;
+        if (target === 0) setEdgeProximity(0);
+      },
+    });
+  }, []);
 
   const getCenterOfElement = useCallback((el) => {
     const { width, height } = el.getBoundingClientRect();
@@ -223,11 +255,13 @@ const BorderGlow = ({
   }, [animated]);
 
   useEffect(() => {
-    if (!isHovered && !sweepActive) setCursorAngle(preferredAngle);
-  }, [preferredAngle, isHovered, sweepActive]);
+    if (!isHovered && !sweepActive && hoverBlend === 0) {
+      setCursorAngle(scrollAngle ?? preferredAngle);
+    }
+  }, [preferredAngle, scrollAngle, isHovered, sweepActive, hoverBlend]);
 
   const colorSensitivity = edgeSensitivity + 20;
-  const hoverProximity = isHovered || sweepActive ? edgeProximity : 0;
+  const hoverProximity = sweepActive ? edgeProximity : edgeProximity * hoverBlend;
   const effectiveProximity = Math.max(hoverProximity, activeProgress);
   const isVisible = isHovered || sweepActive || effectiveProximity > 0.001;
 
@@ -249,20 +283,28 @@ const BorderGlow = ({
   const borderBg = meshGradients.map((g) => `${g} border-box`);
   const fillBg = meshGradients.map((g) => `${g} padding-box`);
   const passiveAngle = scrollAngle ?? preferredAngle;
-  const renderAngle = isHovered || sweepActive ? cursorAngle : passiveAngle;
+  const renderAngle = sweepActive
+    ? cursorAngle
+    : lerpAngleDegrees(passiveAngle, cursorAngle, hoverBlend);
   const angleDeg = `${renderAngle.toFixed(3)}deg`;
 
   return (
     <div
       ref={cardRef}
       onPointerMove={hoverEnabled ? handlePointerMove : undefined}
-      onPointerEnter={hoverEnabled ? () => setIsHovered(true) : undefined}
+      onPointerEnter={
+        hoverEnabled
+          ? () => {
+              setIsHovered(true);
+              animateHoverBlend(1, 720);
+            }
+          : undefined
+      }
       onPointerLeave={
         hoverEnabled
           ? () => {
               setIsHovered(false);
-              setEdgeProximity(0);
-              setCursorAngle(preferredAngle);
+              animateHoverBlend(0, 720);
             }
           : undefined
       }
