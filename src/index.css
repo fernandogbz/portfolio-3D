@@ -140,8 +140,8 @@
 }
 
 .experience-scroll-line-fill {
-  background: linear-gradient(180deg, #c084fc 0%, #38bdf8 50%, #f472b6 100%);
-  box-shadow: 0 0 12px rgba(192, 132, 252, 0.45), 0 0 28px rgba(56, 189, 248, 0.25);
+  background: linear-gradient(180deg, #00cea8 1.9%, #38bdf8 50%, #bf61ff 97.5%);
+  box-shadow: 0 0 12px rgba(0, 206, 168, 0.35), 0 0 18px rgba(56, 189, 248, 0.35), 0 0 28px rgba(191, 97, 255, 0.25);
 }
 
 .experience-timeline {
