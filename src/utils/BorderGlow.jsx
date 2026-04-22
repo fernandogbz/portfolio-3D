@@ -114,10 +114,12 @@ const BorderGlow = ({
   showFill = false,
   activeProgress = 0,
   hoverEnabled = true,
+  preferredAngle = 45,
+  scrollAngle,
 }) => {
   const cardRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
-  const [cursorAngle, setCursorAngle] = useState(45);
+  const [cursorAngle, setCursorAngle] = useState(preferredAngle);
   const [edgeProximity, setEdgeProximity] = useState(0);
   const [sweepActive, setSweepActive] = useState(false);
 
@@ -220,41 +222,50 @@ const BorderGlow = ({
     });
   }, [animated]);
 
+  useEffect(() => {
+    if (!isHovered && !sweepActive) setCursorAngle(preferredAngle);
+  }, [preferredAngle, isHovered, sweepActive]);
+
   const colorSensitivity = edgeSensitivity + 20;
-  const hasProgress = activeProgress > 0.001;
-  const isVisible = isHovered || sweepActive || hasProgress;
-  const borderOpacity = Math.min(
-    1,
-    (isVisible
-      ? Math.max(
-          0,
-          (edgeProximity * 100 - colorSensitivity) / (100 - colorSensitivity)
-        )
-      : 0) +
-      activeProgress * 0.16
-  );
-  const glowOpacity = Math.min(
-    1,
-    (isVisible
-      ? Math.max(
-          0,
-          (edgeProximity * 100 - edgeSensitivity) / (100 - edgeSensitivity)
-        )
-      : 0) +
-      activeProgress * 0.09
-  );
+  const hoverProximity = isHovered || sweepActive ? edgeProximity : 0;
+  const effectiveProximity = Math.max(hoverProximity, activeProgress);
+  const isVisible = isHovered || sweepActive || effectiveProximity > 0.001;
+
+  const borderOpacity = isVisible
+    ? Math.max(
+        0,
+        (effectiveProximity * 100 - colorSensitivity) / (100 - colorSensitivity)
+      )
+    : 0;
+
+  const glowOpacity = isVisible
+    ? Math.max(
+        0,
+        (effectiveProximity * 100 - edgeSensitivity) / (100 - edgeSensitivity)
+      )
+    : 0;
 
   const meshGradients = buildMeshGradients(colors);
   const borderBg = meshGradients.map((g) => `${g} border-box`);
   const fillBg = meshGradients.map((g) => `${g} padding-box`);
-  const angleDeg = `${cursorAngle.toFixed(3)}deg`;
+  const passiveAngle = scrollAngle ?? preferredAngle;
+  const renderAngle = isHovered || sweepActive ? cursorAngle : passiveAngle;
+  const angleDeg = `${renderAngle.toFixed(3)}deg`;
 
   return (
     <div
       ref={cardRef}
       onPointerMove={hoverEnabled ? handlePointerMove : undefined}
       onPointerEnter={hoverEnabled ? () => setIsHovered(true) : undefined}
-      onPointerLeave={hoverEnabled ? () => setIsHovered(false) : undefined}
+      onPointerLeave={
+        hoverEnabled
+          ? () => {
+              setIsHovered(false);
+              setEdgeProximity(0);
+              setCursorAngle(preferredAngle);
+            }
+          : undefined
+      }
       className={`relative grid isolate border border-white/10 ${className}`}
       style={{
         background: backgroundColor,
