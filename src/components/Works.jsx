@@ -29,31 +29,35 @@ const ProjectCard = ({
               className="w-full h-full object-cover rounded-2xl group-hover/card:shadow-xl"
             />
 
-            <div className="absolute inset-0 flex flex-col justify-start items-end m-3 gap-1 card-img_hover">
+            <div className="absolute inset-0 z-20 flex flex-col justify-start items-end m-3 gap-1 card-img_hover pointer-events-none">
               {/* Github */}
               {source_code_link && (
                 <CardItem
-                  translateZ={120}
+                  as="button"
+                  type="button"
+                  translateZ={95}
                   onClick={() => window.open(source_code_link, "_blank")}
-                  className="black-gradient w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
+                  className="black-gradient pointer-events-auto !w-12 !h-12 !min-w-12 !min-h-12 rounded-full !inline-flex items-center justify-center shrink-0 cursor-pointer border border-white/10 shadow-md overflow-hidden p-0"
                 >
                   <img
                     src={github}
                     alt="github"
-                    className="w-7 h-7 object-contain"
+                    className="w-6 h-6 object-contain block pointer-events-none"
                   />
                 </CardItem>
               )}
               {/* Live Preview */}
               <CardItem
-                translateZ={120}
+                as="button"
+                type="button"
+                translateZ={95}
                 onClick={() => window.open(live_preview, "_blank")}
-                className="black-gradient w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
+                className="black-gradient pointer-events-auto !w-12 !h-12 !min-w-12 !min-h-12 rounded-full !inline-flex items-center justify-center shrink-0 cursor-pointer border border-white/10 shadow-md overflow-hidden p-0"
               >
                 <img
                   src={livepreview}
                   alt="live preview"
-                  className="w-7 h-7 object-contain"
+                  className="w-6 h-6 object-contain block pointer-events-none"
                 />
               </CardItem>
             </div>
