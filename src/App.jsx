@@ -44,7 +44,7 @@ const App = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-primary from-10% via-transparent via-50% to-primary to-90% pointer-events-none" /> */}
           <div className="relative z-10 w-full h-full" />
         </div>
-        <div className="relative w-full h-[550px] overflow-hidden bg-primary">
+        <div className="relative w-full min-h-[clamp(52rem,120svh,72rem)] sm:min-h-0 sm:h-[520px] overflow-hidden bg-primary">
           <video
             className="absolute inset-0 h-full w-full object-contain scale-100"
             autoPlay
